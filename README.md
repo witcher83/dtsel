@@ -54,18 +54,35 @@ The local state
 **Kind**: global typedef  
 **Properties**
 
-| Name | Type |
-| --- | --- |
-| dateFormat | <code>String</code> | 
-| timeFormat | <code>String</code> | 
-| showDate | <code>Boolean</code> | 
-| showTime | <code>Boolean</code> | 
-| paddingX | <code>Number</code> | 
-| paddingY | <code>Number</code> | 
-| defaultView | [<code>BodyType</code>](#BodyType) | 
-| direction | <code>&quot;TOP&quot;</code> \| <code>&quot;BOTTOM&quot;</code> | 
+| Name         | Type                                |
+|--------------|-------------------------------------|
+| dateFormat   | <code>String</code>                 | 
+| timeFormat   | <code>String</code>                 | 
+| showDate     | <code>Boolean</code>                | 
+| showTime     | <code>Boolean</code>                | 
+| paddingX     | <code>Number</code>                 | 
+| paddingY     | <code>Number</code>                 | 
+| defaultView  | [<code>BodyType</code>](#BodyType)  | 
+| direction    | <code>&quot;TOP&quot;</code> \      | <code>&quot;BOTTOM&quot;</code> | 
+| localization | [<code>Array</code>](#localization) | 
+
 
 <a name="BodyType"></a>
 
 ## BodyType : <code>&quot;DAYS&quot;</code> \| <code>&quot;MONTHS&quot;</code> \| <code>&quot;YEARS&quot;</code>
 **Kind**: global typedef  
+
+<a name="localization"></a>
+
+## Localization : 
+a multidimensional array with the following format:
+
+```js
+var localization = {
+	weekdays    : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+	months      : ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+	months_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "December"]
+};
+```
+
+**Kind**: array
