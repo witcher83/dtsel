@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link id="dtsel" rel="stylesheet" href="assets/css/dtsel.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+<label>TRY ME!
+	<input type="text" name="datepicker" id="datepicker" />
+</label>
+<script type="text/javascript" src="assets/js/dtsel.js"></script>
+<script type="text/javascript">
+	jQuery( function ( $ ) {
+		"use strict";
+		var instance = new dtsel.DTS( 'input[name="datepicker"]' );
+	} );
+</script>
+</body>
+</html>

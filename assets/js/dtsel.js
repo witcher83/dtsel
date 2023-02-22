@@ -937,28 +937,6 @@
 		return ( '' + default_val ).repeat( diff ) + valStr;
 	}
 
-	/**
-	 * @template X
-	 * @template Y
-	 * @param {X} obj
-	 * @param {Y} objDefaults
-	 * @returns {X|Y} merged object
-	 */
-	function setDefaults( obj, objDefaults ) {
-		var keys = Object.keys( objDefaults );
-		for ( var i = 0; i < keys.length; i++ ) {
-			var key = keys[i];
-
-			if ( Array.isArray( key ) ) {
-				setDefaults( obj[key], objDefaults[key] )
-			} else if ( ! Object.prototype.hasOwnProperty.call( obj, key ) ) {
-				obj[key] = objDefaults[key];
-			}
-		}
-		return obj;
-	}
-
-
 	window.dtsel = Object.create( {}, {
 		DTS  : { value: DTS },
 		DTObj: { value: DTBox },
@@ -975,7 +953,6 @@
 				renderDate : { value: renderDate },
 				parseTime  : { value: parseTime },
 				renderTime : { value: renderTime },
-				setDefaults: { value: setDefaults },
 			} ),
 		},
 	} );
